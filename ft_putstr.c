@@ -15,6 +15,5 @@ int	ft_putstr(char *s)
 		count_chars += (write(1, s, 1));
 		s++;
 	}
-	printf("%d", count_chars);
 	return (count_chars);
 }

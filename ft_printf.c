@@ -21,7 +21,6 @@ int ft_printf(char const *str, ...)
         else
             count_chars += ft_putchar(str[i]);
         i++;
-        printf("%d\n", count_chars);
     }
     va_end(args);
     return (count_chars);
