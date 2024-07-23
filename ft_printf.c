@@ -21,6 +21,7 @@ int ft_printf(char const *str, ...)
         else
             count_chars += ft_putchar(str[i]);
         i++;
+        printf("%d\n", count_chars);
     }
     va_end(args);
     return (count_chars);
@@ -28,6 +29,8 @@ int ft_printf(char const *str, ...)
 
 int print_flags(unsigned int count_chars, int flag, va_list args)
 {
+    count_chars = 0;
+
     if (flag == 'c')
         count_chars += ft_putchar(va_arg(args, int));
     else if (flag == 's')
@@ -45,4 +48,23 @@ int print_flags(unsigned int count_chars, int flag, va_list args)
     else
         count_chars += ft_putchar('%');
     return (count_chars);
+}
+
+char	*ft_strchr(const char *str, int c)
+{
+	int				i;
+	unsigned char	*copy;
+
+	i = 0;
+	copy = (unsigned char *)str;
+	while (copy[i] != '\0')
+	{
+		if (copy[i] == (unsigned char)c)
+			return ((char *)copy + i);
+		i++;
+	}
+	if (copy[i] == (unsigned char)c)
+		return ((char *)copy + i);
+	else
+		return (0);
 }

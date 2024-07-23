@@ -12,8 +12,9 @@ int	ft_putstr(char *s)
 	}
 	while (*s != '\0')
 	{
-		count_chars += write(1, s, 1);
+		count_chars += (write(1, s, 1));
 		s++;
 	}
+	printf("%d", count_chars);
 	return (count_chars);
 }
