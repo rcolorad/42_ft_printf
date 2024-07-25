@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rcolorad <rcolorad@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/25 18:04:57 by rcolorad          #+#    #+#             */
+/*   Updated: 2024/07/25 18:04:57 by rcolorad         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
- static int	put_hex_ptr(uintptr_t ptr)
+static int	put_hex_ptr(uintptr_t ptr)
 {
 	char	*lowercase;
 	int		num_chars;
